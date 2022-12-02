@@ -1,0 +1,21 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kdamiani/frontend-boilerplate.git",
+  "author": "Kevin Damiani <info@kevin-damiani.de>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "devDependencies": {
+    "jquery": "^3.6.1",
+    "parcel-bundler": "^1.12.5",
+    "postcss-preset-env": "^6.7.1",
+    "posthtml-include": "^1.7.4"
+  },
+  "dependencies": {
+    "swiper": "^8.4.5"
+  }
+}
