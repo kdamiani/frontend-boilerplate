@@ -1,16 +1,14 @@
-//@import './core/variables';
-//@import './core/flexboxgrid';
-//@import './core/mixins';
-//@import './core/colors';
-//@import './core/fonts';
+@import './core/variables';
+@import './core/flexboxgrid';
+@import './core/mixins';
+@import './core/colors';
+@import './core/fonts';
 
 // Plugins
-//@import 'plugins/swiper';
-//@import 'plugins/font-awesome';
-//@import 'plugins/magnific-popup';
+@import '~swiper/swiper.scss';
 
 // components
-//@import 'components/gallery';
+//@import 'components/';
 
 body {
   margin: 0;
@@ -19,6 +17,7 @@ body {
   line-height: 1.15rem;
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
+  color: $color-2;
 
   *,
   *::before,
