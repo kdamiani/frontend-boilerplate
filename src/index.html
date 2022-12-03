@@ -1,24 +1,19 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Frontend Boilerplate</title>
-  <link rel="stylesheet" href="./sass/style.scss">
+  {{> head }}
 </head>
 <body>
-  <include src="src/partials/header.html"></include>
+{{> header }}
 
   <main>
     <h2>Main</h2>
     <a href="contact.html">Contact</a>
-
-    <include src="src/partials/swiper.html"></include>
+    <a href="examples.html">Examples</a>
   </main>
 
-  <include src="src/partials/footer.html"></include>
+{{> footer }}
 
-  <script src="./js/default.js"></script>
+  <script type="module" src="./js/default.js"></script>
 </body>
 </html>

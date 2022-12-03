@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+<head>
+  {{> head }}
+
+  <style>
+    .grid-examples div[class*="col"] {
+      background-color: rgba(12, 125, 200, 0.1);
+      border: 1px solid rgba(12, 125, 200, 0.25);
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+
+    .container {
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Examples</h1>
+      <a href="/">Start</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Grid</h2>
+      <div class="grid-examples">
+        {{> examples/bootstrap-grid }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Slider</h2>
+      {{> examples/swiper }}
+    </div>
+  </div>
+</div>
+
+
+<script type="module" src="./js/default.js"></script>
+</body>
+</html>

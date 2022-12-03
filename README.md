@@ -1,5 +1,5 @@
-# Frontend Boilerplate with Parcels js
-a frontend boilerplate to create fast templates. Made with Parcel js.
+# Frontend Boilerplate with Vite
+a frontend boilerplate to create fast templates. Made with Vite.
 
 ## Installation
 Install frontend-boilerplate with yarn

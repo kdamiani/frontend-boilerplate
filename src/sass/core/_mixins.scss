@@ -1,6 +1,8 @@
-// media queries
-// https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints
-@mixin create-color-classes($attribute: 'color', $prefix: '-') {
+/* ========================================
+  Mixins / Functions
+======================================== */
+
+@mixin create-color-classes($attribute: "color", $prefix: "-") {
   @each $name, $hex in $colors {
     &#{$prefix}#{$name} {
       #{$attribute}: $hex !important;
@@ -13,23 +15,17 @@
 }
 
 @mixin arrow($direction, $size, $color) {
-  content: ""; // ensures the arrows are visible
+  $directions: ("down", "left", "up", "right");
+  $positions: ("top", "right", "bottom", "left");
 
-  // ensures the size of the arrows is correct:
+  content: "";
   width: 0;
   height: 0;
 
-  // Lists for positions/directions
-  $directions: ('down', 'left', 'up', 'right');
-  $positions: ('top', 'right', 'bottom', 'left');
-
-  // Loop through each position
   @each $position in $positions {
-    // Calculate the index of the position in the list
-    $index: index($positions, $position);
+    $i: index($positions, $position);
 
-    // If the position matches the direction, render a colored border
-    @if nth($directions, $index) == $direction {
+    @if nth($directions, $i) == $direction {
       border-#{$position}: $size solid $color;
     } @else {
       border-#{$position}: $size solid transparent;
@@ -37,12 +33,12 @@
   }
 }
 
-@mixin triangle-arrow($rotation, $size ,$thickness, $color) {
-  content: ""; // ensures the arrows are visible
-  color: $color;
+@mixin triangle-arrow($rotation, $size, $thickness, $color) {
+  content: "";
   width: $size;
   height: $size;
   border-right: $thickness solid;
   border-bottom: $thickness solid;
+  color: $color;
   transform: rotate($rotation);
 }
